@@ -1,0 +1,45 @@
+/*
+ * NoCats Browser — Content Script Styles
+ * Controls the visual state of pages and images during and after classification.
+ */
+
+/* ── Page-level: hide everything until scan is complete ────────────── */
+html:not([data-nocats-ready]) body {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+/* Reveal page once scanning is complete */
+html[data-nocats-ready] body {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in !important;
+}
+
+/* Pending classification — blur while checking */
+img[data-nocats-pending] {
+  filter: blur(20px) !important;
+  transition: filter 0.3s ease-out !important;
+  pointer-events: none !important;
+}
+
+/* Safe image — remove blur smoothly */
+img[data-nocats-safe] {
+  filter: none !important;
+  transition: filter 0.4s ease-in !important;
+}
+
+/* Blocked cat image — hide completely */
+img[data-nocats-blocked] {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Blocked background images */
+[data-nocats-blocked] {
+  background-image: none !important;
+}

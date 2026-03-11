@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoCats Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <header class="popup-header">
+            <div class="header-icon">🚫🐱</div>
+            <h1>NoCats</h1>
+            <p class="subtitle">Cat-free browsing</p>
+        </header>
+
+        <!-- Status -->
+        <div class="status-bar" id="statusBar">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Initializing...</span>
+        </div>
+
+        <!-- Settings -->
+        <div class="settings-section">
+            <div class="setting-row">
+                <div class="setting-info">
+                    <span class="setting-icon">🖼️</span>
+                    <div>
+                        <div class="setting-label">Block Cat Images</div>
+                        <div class="setting-desc">ML-powered detection</div>
+                    </div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="imageBlocking" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-info">
+                    <span class="setting-icon">📝</span>
+                    <div>
+                        <div class="setting-label">Filter Cat Text</div>
+                        <div class="setting-desc">Masks "cat" and variants</div>
+                    </div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="textFiltering" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row threshold-row">
+                <div class="setting-info">
+                    <span class="setting-icon">🎯</span>
+                    <div>
+                        <div class="setting-label">Detection Sensitivity</div>
+                        <div class="setting-desc">Threshold: <span id="thresholdValue">15</span>%</div>
+                    </div>
+                </div>
+                <input type="range" id="confidenceThreshold" min="5" max="80" value="15" class="slider">
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-value" id="cacheSize">0</span>
+                <span class="stat-label">Cached</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="backendType">—</span>
+                <span class="stat-label">Backend</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="popup-footer">
+            <span>100% on-device processing</span>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

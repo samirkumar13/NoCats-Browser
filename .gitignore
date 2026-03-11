@@ -1,0 +1,21 @@
+# Build artifacts
+nocats-extension.zip
+nocats-extension.xpi
+samir.xpi
+*.zip
+*.xpi
+
+# Logs
+*.txt
+!README.md
+
+# Scripts (not part of extension)
+scripts/
+
+# Dev files
+test.html
+install.html
+serve_xpi.py
+node_modules/
+.DS_Store
+Thumbs.db
