@@ -3,6 +3,7 @@
 A Firefox extension that **blocks cat images** using on-device machine learning and **filters all cat-related text** from web pages. Everything runs 100% on your device — no data is ever sent to any server.
 
 👉 **[Download on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/nocats-browser/)**
+
 ✅ *Successfully passed Mozilla's rigorous add-on review process (v1.0.3)*
 
 [![Firefox Add-on](https://img.shields.io/badge/Firefox-Add--on-FF7139?logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/nocats-browser/)
